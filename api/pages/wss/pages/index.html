@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>License Protected Content</title>
+  <script>
+  async function checkLicense() {
+    const key = prompt("Enter your license key:");
+    if (!key) return;
+    
+    try {
+      const response = await fetch(`/wss/payload/license_global_qx?key=${key}`);
+      const data = await response.json();
+      
+      if (data.access_granted) {
+        document.getElementById('protected-content').innerHTML = `
+          <h1>Welcome Licensed User!</h1>
+          <p>Your license (${data.license}) is valid until ${data.expiry}</p>
+          <!-- Your protected content here -->
+        `;
+      } else {
+        alert("Invalid license key");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      alert("License verification failed");
+    }
+  }
+  </script>
+</head>
+<body>
+  <button onclick="checkLicense()">Verify License</button>
+  <div id="protected-content"></div>
+</body>
+</html>
