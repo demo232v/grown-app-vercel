@@ -2,11 +2,17 @@
   "version": 2,
   "routes": [
     {
+      "src": "/loader.js",
+      "headers": {
+        "Content-Type": "application/javascript",
+        "Cache-Control": "no-store, max-age=0"
+      }
+    },
+    {
       "src": "/secure-app.js",
       "headers": {
         "Content-Type": "application/javascript",
-        "Cache-Control": "no-store, max-age=0",
-        "X-Content-Type-Options": "nosniff"
+        "Cache-Control": "no-store, max-age=0"
       }
     },
     {
