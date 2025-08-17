@@ -1,24 +1,26 @@
 {
   "version": 2,
+  "builds": [
+    { "src": "api/verify.js", "use": "@vercel/node" },
+    { "src": "pages/wss/payload/license_global_qx.js", "use": "@vercel/node" }
+  ],
   "routes": [
     {
-      "src": "/loader.js",
-      "headers": {
-        "Content-Type": "application/javascript",
-        "Cache-Control": "no-store, max-age=0"
-      }
+      "src": "/api/verify",
+      "dest": "/api/verify.js",
+      "methods": ["GET"]
     },
     {
-      "src": "/secure-app.js",
-      "headers": {
-        "Content-Type": "application/javascript",
-        "Cache-Control": "no-store, max-age=0"
-      }
+      "src": "/wss/payload/license_global_qx",
+      "dest": "/pages/wss/payload/license_global_qx.js",
+      "methods": ["GET"]
     },
     {
-      "src": "/.*",
-      "dest": "/404.html",
-      "status": 404
+      "src": "/",
+      "dest": "/pages/index.html"
     }
-  ]
+  ],
+  "env": {
+    "PYTHONANYWHERE_SECRET": "@pythonanywhere-secret-key"
+  }
 }
