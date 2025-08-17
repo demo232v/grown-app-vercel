@@ -3,7 +3,6 @@
     "routes": [
         {
             "src": "/secret.js",
-            "dest": "/secret.js",
             "headers": {
                 "Content-Type": "application/javascript",
                 "Cache-Control": "no-store, max-age=0"
@@ -14,8 +13,5 @@
             "dest": "/404.html",
             "status": 404
         }
-    ],
-    "github": {
-        "silent": true
-    }
+    ]
 }
