@@ -1,0 +1,33 @@
+{
+  "name": "grown-app-vercel",
+  "version": "1.0.0",
+  "description": "A hidden console application with secret access and license verification",
+  "type": "module",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "vercel build",
+    "deploy": "vercel --prod",
+    "preview": "vercel",
+    "start": "vercel dev --listen 3000"
+  },
+  "keywords": [
+    "vercel",
+    "serverless",
+    "javascript",
+    "license-verification",
+    "hidden-console"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@vercel/node": "^3.0.0",
+    "vercel": "^32.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/demo232v/grown-app-vercel.git"
+  }
+}

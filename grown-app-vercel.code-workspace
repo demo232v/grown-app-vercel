@@ -1,0 +1,19 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "typescript.preferences.includePackageJsonAutoImports": "auto"
+  },
+  "extensions": {
+    "recommendations": [
+      "ms-vscode.vscode-json",
+      "esbenp.prettier-vscode",
+      "ms-vscode.vscode-typescript-next",
+      "vercel.vercel-vscode",
+      "ms-vscode.js-debug"
+    ]
+  }
+}
